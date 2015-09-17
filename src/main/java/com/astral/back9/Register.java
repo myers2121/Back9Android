@@ -26,6 +26,8 @@ public class Register extends AppCompatActivity {
 
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
+        // dvldsnvibv
+        // This is another change
     }
 
     @Override

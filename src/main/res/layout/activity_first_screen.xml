@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@mipmap/riverside"
+    tools:context="com.astral.back9.FirstScreen">
+
+        <TextView
+            android:text="BACK9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFF"
+            android:textSize="40dp"
+            android:id="@+id/identity"
+            android:layout_marginTop="130dp"
+            android:layout_centerHorizontal="true"/>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/loginButtonLayout"
+            android:weightSum="1.0"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:id="@+id/sign_in_button"
+                android:background="@drawable/sign_in_button"
+                android:textColor="#9b9b9b"
+                android:layout_marginRight="20dp"
+                android:text="SIGN IN"
+                android:layout_weight="0.5" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="0.5"
+                android:id="@+id/register_button"
+                android:textColor="#fff"
+                android:background="@drawable/register_button"
+                android:text="REGISTER" />
+        </LinearLayout>
+
+
+</RelativeLayout>

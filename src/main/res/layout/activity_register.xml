@@ -1,0 +1,133 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    tools:context="com.astral.identified.RegisterGeneral">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_marginTop="80dp"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/firstname_text_input_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:windowSoftInputMode="stateHidden"
+                android:layout_marginBottom="20dp">
+                <EditText
+                    android:id="@+id/first_name_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:textCursorDrawable = "@null"
+                    android:textColor="@color/ColorPrimary"
+                    android:textSize="12dp"
+                    android:hint="First name "
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/last_name_input_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:layout_marginBottom="20dp">
+                <EditText
+                    android:id="@+id/last_name_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:textCursorDrawable = "@null"
+                    android:textColor="@color/ColorPrimary"
+                    android:textSize="12dp"
+                    android:hint="Last name "/>
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/email_text_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="20dp">
+            <EditText
+                android:id="@+id/email_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textCursorDrawable = "@null"
+                android:textColor="@color/ColorPrimary"
+                android:textSize="12dp"
+                android:hint="name@example.com "/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/password_text_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="20dp">
+            <EditText
+                android:id="@+id/password_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textCursorDrawable = "@null"
+                android:textColor="@color/ColorPrimary"
+                android:textSize="12dp"
+                android:hint="Password "/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/mobile_text_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="20dp"
+            >
+            <EditText
+                android:id="@+id/mobile_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mobile "
+                android:textSize="12dp"
+                android:textCursorDrawable = "@null"
+                android:textColor="@color/ColorPrimary"
+                android:inputType="phone"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/register_button"
+            android:textSize="15dp"
+            android:text="NEXT"
+            android:textColor="#FFF"
+            android:id="@+id/next_register"/>
+
+
+    </LinearLayout>
+
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/extra_tool_bar">
+    </include>
+
+
+</android.support.design.widget.CoordinatorLayout>

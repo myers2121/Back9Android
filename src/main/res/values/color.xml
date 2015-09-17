@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ColorPrimary">#589A0B</color>
+    <color name="ColorPrimaryDark">#2D5320</color>
+    <color name="Facebook">#3B5893</color>
+    <color name="GooglePlus">#DB4C3E</color>
+</resources>

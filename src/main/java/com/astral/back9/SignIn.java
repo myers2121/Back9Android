@@ -28,8 +28,7 @@ public class SignIn extends AppCompatActivity {
 
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
-        ///
-        // This is going to be a comment where we are going to try and commit changes.
+
     }
 
     @Override

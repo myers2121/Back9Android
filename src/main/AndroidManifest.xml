@@ -6,12 +6,11 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
-        >
+        android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,13 +20,13 @@
         <activity
             android:name=".FirstScreen"
             android:label="@string/title_activity_first_screen"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".SignIn"
             android:label="@string/title_activity_sign_in"
-            android:screenOrientation="portrait"
-            android:parentActivityName=".FirstScreen" >
+            android:parentActivityName=".FirstScreen"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.astral.back9.FirstScreen" />
@@ -35,11 +34,51 @@
         <activity
             android:name=".Register"
             android:label="@string/title_activity_register"
-            android:screenOrientation="portrait"
-            android:parentActivityName=".FirstScreen" >
+            android:parentActivityName=".FirstScreen"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.astral.back9.FirstScreen" />
+        </activity>
+        <activity
+            android:name=".Social"
+            android:label="@string/title_activity_social"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.astral.back9.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Ranking"
+            android:label="@string/title_activity_ranking"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.astral.back9.MainActivity" />
+        </activity>
+        <activity
+            android:name=".About"
+            android:label="@string/title_activity_about"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.astral.back9.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Help"
+            android:label="@string/title_activity_help"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.astral.back9.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Profile"
+            android:label="@string/title_activity_profile"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.astral.back9.MainActivity" />
         </activity>
     </application>
 

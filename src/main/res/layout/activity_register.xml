@@ -116,7 +116,7 @@
             android:layout_height="60dp"
             android:background="@drawable/register_button"
             android:textSize="15dp"
-            android:text="NEXT"
+            android:text="REGISTER"
             android:textColor="#FFF"
             android:id="@+id/next_register"/>
 

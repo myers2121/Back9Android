@@ -68,9 +68,6 @@ public class Register extends AppCompatActivity {
                 user.put("PhoneNumber", phone);
                 user.put("FirstName", firstName);
                 user.put("LastName", lastName);
-                //user.put("Birthday", birthday);
-
-                Toast.makeText(getApplicationContext(), "Creating your profile!", Toast.LENGTH_LONG).show();
 
                 user.signUpInBackground(new SignUpCallback() {
                     public void done(ParseException e) {

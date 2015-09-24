@@ -1,16 +1,28 @@
 package com.astral.back9;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.parse.ParseException;
+import com.parse.ParseUser;
+import com.parse.SignUpCallback;
 
 public class Register extends AppCompatActivity {
 
     private Toolbar toolbar;
-    private TextView toolbarText;
+    private TextView toolbarText, firstNameText, lastNameText, emailText, usernameText, passwordText, phoneText;
+
+    private Button signUp;
+
+    private String firstName, lastName, email, username, password, phone, birthday;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +38,58 @@ public class Register extends AppCompatActivity {
 
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
-        // dvldsnvibv
-        // This is another change
+
+        firstNameText = (TextView) findViewById(R.id.first_name_register);
+        lastNameText = (TextView) findViewById(R.id.last_name_register);
+        emailText = (TextView) findViewById(R.id.email_register);
+        usernameText = (TextView) findViewById(R.id.username_register);
+        passwordText = (TextView) findViewById(R.id.password_register);
+        phoneText = (TextView) findViewById(R.id.mobile_register);
+
+        signUp = (Button) findViewById(R.id.next_register);
+        signUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                email = emailText.getText().toString();
+                phone = phoneText.getText().toString();
+                lastName = lastNameText.getText().toString();
+                firstName = firstNameText.getText().toString();
+                password = passwordText.getText().toString();
+                username = usernameText.getText().toString();
+
+
+                ParseUser user = new ParseUser();
+                user.setUsername(username);
+                user.setPassword(password);
+                user.setEmail(email);
+
+// other fields can be set just like with ParseObject
+                user.put("PhoneNumber", phone);
+                user.put("FirstName", firstName);
+                user.put("LastName", lastName);
+                //user.put("Birthday", birthday);
+
+                Toast.makeText(getApplicationContext(), "Creating your profile!", Toast.LENGTH_LONG).show();
+
+                user.signUpInBackground(new SignUpCallback() {
+                    public void done(ParseException e) {
+                        if (e == null) {
+                            // Hooray! Let them use the app now.
+                            Intent intent = new Intent(Register.this, MainActivity.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                            startActivity(intent);
+                        } else {
+                            // Sign up didn't succeed. Look at the ParseException
+                            // to figure out what went wrong
+
+                            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+            }
+        });
     }
 
     @Override

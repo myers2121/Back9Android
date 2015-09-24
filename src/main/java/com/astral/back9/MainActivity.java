@@ -13,12 +13,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.parse.ParseUser;
+
 public class MainActivity extends AppCompatActivity {
+
+    // Creating variables up top need to be private to keep access only to this class.
 
     private Toolbar toolbar;
     private TextView toolbarText;
 
-    String TITLES[] = {"Profile", "Social", "Ranking", "About", "Help"};
+    String TITLES[] = {"Overview", "Profile", "Social", "Ranking", "About", "Help"};
 
     String NAME = "Connor Myers";
     String LOCATION = "Fresno, CA";
@@ -33,60 +37,73 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
-        toolbar = (Toolbar) findViewById(R.id.tool_bar); // Attaching the layout to the toolbar object
-        toolbar.setTitle("");
-
-        toolbarText = (TextView) toolbar.findViewById(R.id.toolbar_text);
-
-        toolbarText.setText("Overview");
-        setSupportActionBar(toolbar);
-
-        mRecyclerView = (RecyclerView) findViewById(R.id.RecyclerView); // Assigning the RecyclerView Object to the xml View
-
-        mRecyclerView.setHasFixedSize(true);  // Letting the system know that the list objects are of fixed size
-
-        //NAME = currentUser.getString("firstName") + " " + currentUser.getString("lastName");
-        //LOCATION = currentUser.getEmail();
+        // This is checking to see if the user is logged in or not. If they user isnt logged in then they are going to be sent
+        // to the sign in screen.
 
 
-        mAdapter = new NavDrawerAdapter(TITLES,NAME,LOCATION,this);       // Creating the Adapter of MyAdapter class(which we are going to see in a bit)
-        // And passing the titles,icons,header view name, header view email,
-        // and header view profile picture
+        ParseUser currentUser = ParseUser.getCurrentUser();
+        if (currentUser == null) {
+            // do stuff with the user
+            Intent intent = new Intent(MainActivity.this, FirstScreen.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+        } else {
+            setContentView(R.layout.activity_main);
 
 
-        mAdapter = new NavDrawerAdapter(TITLES,NAME,LOCATION,this);       // Creating the Adapter of MyAdapter class(which we are going to see in a bit)
-        // And passing the titles,icons,header view name, header view email,
-        // and header view profile picture
+            // Creates and sets up the action bar at the top of the overview screen. This is the same of every screen.
 
-        mRecyclerView.setAdapter(mAdapter);                              // Setting the adapter to RecyclerView
+            toolbar = (Toolbar) findViewById(R.id.tool_bar); // Attaching the layout to the toolbar object
+            toolbar.setTitle("");
 
-        mLayoutManager = new LinearLayoutManager(this);                 // Creating a layout Manager
+            toolbarText = (TextView) toolbar.findViewById(R.id.toolbar_text);
 
-        mRecyclerView.setLayoutManager(mLayoutManager);                 // Setting the layout Manager
+            toolbarText.setText("Overview");
+            setSupportActionBar(toolbar);
 
-        Drawer = (DrawerLayout) findViewById(R.id.DrawerLayout);        // Drawer object Assigned to the view
-        mDrawerToggle = new ActionBarDrawerToggle(this,Drawer,toolbar,R.string.openDrawer,R.string.closeDrawer){
+            mRecyclerView = (RecyclerView) findViewById(R.id.RecyclerView); // Assigning the RecyclerView Object to the xml View
 
-            @Override
-            public void onDrawerOpened(View drawerView) {
-                super.onDrawerOpened(drawerView);
-                // code here will execute once the drawer is opened( As I dont want anything happened whe drawer is
-                // open I am not going to put anything here)
-            }
+            mRecyclerView.setHasFixedSize(true);  // Letting the system know that the list objects are of fixed size
 
-            @Override
-            public void onDrawerClosed(View drawerView) {
-                super.onDrawerClosed(drawerView);
-                // Code here will execute once drawer is closed
-            }
+            mAdapter = new NavDrawerAdapter(TITLES,NAME,LOCATION,this);       // Creating the Adapter of MyAdapter class(which we are going to see in a bit)
+            // And passing the titles,icons,header view name, header view email,
+            // and header view profile picture
 
 
+            mAdapter = new NavDrawerAdapter(TITLES,NAME,LOCATION,this);       // Creating the Adapter of MyAdapter class(which we are going to see in a bit)
+            // And passing the titles,icons,header view name, header view email,
+            // and header view profile picture
 
-        }; // Drawer Toggle Object Made
-        Drawer.setDrawerListener(mDrawerToggle); // Drawer Listener set to the Drawer toggle
-        mDrawerToggle.syncState();
+            mRecyclerView.setAdapter(mAdapter);                              // Setting the adapter to RecyclerView
+
+            mLayoutManager = new LinearLayoutManager(this);                 // Creating a layout Manager
+
+            mRecyclerView.setLayoutManager(mLayoutManager);                 // Setting the layout Manager
+
+            Drawer = (DrawerLayout) findViewById(R.id.DrawerLayout);        // Drawer object Assigned to the view
+            mDrawerToggle = new ActionBarDrawerToggle(this,Drawer,toolbar,R.string.openDrawer,R.string.closeDrawer){
+
+                @Override
+                public void onDrawerOpened(View drawerView) {
+                    super.onDrawerOpened(drawerView);
+                    // code here will execute once the drawer is opened( As I dont want anything happened whe drawer is
+                    // open I am not going to put anything here)
+                }
+
+                @Override
+                public void onDrawerClosed(View drawerView) {
+                    super.onDrawerClosed(drawerView);
+                    // Code here will execute once drawer is closed
+                }
+
+
+
+            }; // Drawer Toggle Object Made
+            Drawer.setDrawerListener(mDrawerToggle); // Drawer Listener set to the Drawer toggle
+            mDrawerToggle.syncState();
+        }
     }          // Finally we set the drawer toggle sync State
 
 
@@ -106,7 +123,10 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_sign_out) {
+            ParseUser.logOutInBackground();
             Intent intent = new Intent(MainActivity.this, FirstScreen.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
             return true;
         }

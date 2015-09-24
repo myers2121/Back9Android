@@ -29,7 +29,7 @@ public class NavDrawerAdapter extends RecyclerView.Adapter<NavDrawerAdapter.View
     private static final int TYPE_ITEM = 1;
 
     private String mNavTitles[]; // String Array to store the passed titles Value from MainActivity.java
-    private int mIcons[] = {R.mipmap.profile, R.mipmap.social, R.mipmap.ranking, R.mipmap.about, R.mipmap.help};       // Int Array to store the passed icons resource value from MainActivity.java
+    private int mIcons[] = {R.mipmap.overview, R.mipmap.profile, R.mipmap.social, R.mipmap.ranking, R.mipmap.about, R.mipmap.help};       // Int Array to store the passed icons resource value from MainActivity.java
 
     private String name;        //String Resource for header View Name
     private int profile;        //int Resource for header view profile picture
@@ -86,28 +86,31 @@ public class NavDrawerAdapter extends RecyclerView.Adapter<NavDrawerAdapter.View
 
             if (position == 1) {
 
-                Intent helpIntent = new Intent((Activity) contxt, Profile.class);
+                Intent helpIntent = new Intent((Activity) contxt, MainActivity.class);
                 contxt.startActivity(helpIntent);
 
             } else if (position == 2) {
 
-                Intent settingsIntent = new Intent((Activity) contxt, Social.class);
+                Intent settingsIntent = new Intent((Activity) contxt, Profile.class);
                 contxt.startActivity(settingsIntent);
 
             } else if (position == 3) {
-                Intent helpIntent = new Intent((Activity) contxt, Ranking.class);
+                Intent helpIntent = new Intent((Activity) contxt, Social.class);
                 contxt.startActivity(helpIntent);
 
             } else if (position == 4) {
 
-                Intent settingsIntent = new Intent((Activity) contxt, About.class);
+                Intent settingsIntent = new Intent((Activity) contxt, Ranking.class);
                 contxt.startActivity(settingsIntent);
 
             } else if (position == 5) {
 
-                Intent settingsIntent = new Intent((Activity) contxt, Help.class);
+                Intent settingsIntent = new Intent((Activity) contxt, About.class);
                 contxt.startActivity(settingsIntent);
 
+            } else {
+                Intent settingsIntent = new Intent((Activity) contxt, Help.class);
+                contxt.startActivity(settingsIntent);
             }
 
         }

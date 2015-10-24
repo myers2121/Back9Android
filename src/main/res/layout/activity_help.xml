@@ -209,7 +209,7 @@
         android:id="@+id/RecyclerView"
         android:layout_width="320dp"
         android:layout_height="match_parent"
-        android:layout_gravity="start"
+        android:layout_gravity="left"
         android:background="#589A0B"
         android:scrollbars="vertical">
 

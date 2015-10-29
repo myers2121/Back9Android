@@ -83,8 +83,8 @@ public class SignIn extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // This will send you to the soon to be forgot password screen.
-                //Intent intent = new Intent(SignIn.this, ForgotPassword.class);
-                //startActivity(intent);
+                Intent intent = new Intent(SignIn.this, ForgotPassword.class);
+                startActivity(intent);
             }
         });
 

@@ -12,13 +12,37 @@
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
         android:layout_marginTop="80dp"
-
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:weightSum="1"
             android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_marginEnd="8dp"
+                android:background="#4a4a4a"
+                android:src="@mipmap/ic_launcher"
+                android:layout_weight=".5"/>
+
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:background="#4a4a4a"
+                android:layout_marginStart="8dp"
+                android:layout_weight=".5"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/firstname_text_input_layout"

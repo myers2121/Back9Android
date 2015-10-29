@@ -84,6 +84,26 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.astral.back9.MainActivity" />
         </activity>
+        <activity
+            android:name=".FirstLoadActivity"
+            android:label="@string/title_activity_first_load" >
+        </activity>
+        <activity
+            android:name=".StartRound"
+            android:label="@string/title_activity_start_round"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.astral.back9.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ForgotPassword"
+            android:label="@string/title_activity_forgot_password"
+            android:parentActivityName=".SignIn" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.astral.back9.SignIn" />
+        </activity>
     </application>
 
 </manifest>

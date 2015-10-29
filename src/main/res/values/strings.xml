@@ -14,4 +14,9 @@
     <string name="title_activity_help">Help</string>
     <string name="title_activity_profile">Profile</string>
     <string name="facebook_button">Visit us on Facebook</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_start_round">StartRound</string>
+    <string name="title_activity_forgot_password">ForgotPassword</string>
+
 </resources>

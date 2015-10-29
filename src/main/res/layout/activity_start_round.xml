@@ -1,0 +1,118 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:weightSum="2"
+    android:orientation="vertical"
+    tools:context="com.astral.back9.StartRound">
+
+        <include
+            android:id="@+id/tool_bar"
+            layout="@layout/tool_bar">
+        </include>
+
+
+    <LinearLayout
+        android:id="@+id/course_image"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="#4a4a4a"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/course_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fig Garden Golf Course"
+                android:textColor="#FFF"
+                android:layout_marginBottom="16dp"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/course_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fresno, CA"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/top_circles"
+        android:layout_below="@+id/course_image"
+        android:layout_width="fill_parent"
+        android:weightSum="2"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/circle_image_background"
+            android:orientation="horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp">
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/par_data"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:background="@drawable/circle_image_background"
+            android:orientation="vertical"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp">
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/top_circles"
+            android:id="@+id/player_data"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/circle_image_background"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp">
+
+
+
+        </LinearLayout>
+
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="65dp"
+        android:text="START ROUND"
+        android:textColor="#FFF"
+        android:background="@drawable/register_button"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp" />
+
+</LinearLayout>

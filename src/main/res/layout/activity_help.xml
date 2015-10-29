@@ -20,6 +20,189 @@
             layout="@layout/tool_bar">
         </include>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="20dp"
+            android:background="#d8d8d8"
+            android:orientation="vertical">
+
+
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/account_button"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/help_buttons"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Account"
+                    android:textSize="15sp"
+                    android:id="@+id/account"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="35dp"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/imageView"
+                    android:background="@mipmap/button_arrow"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/imageView2"
+                    android:background="@mipmap/adjusted_lock"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp">
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/id_card_button"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/help_buttons">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID Card"
+                    android:textSize="15sp"
+                    android:id="@+id/id"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="35dp" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:background="@mipmap/button_arrow"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@mipmap/id_card"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp">
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/where_b9_button"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/help_buttons">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Where to use Back9?"
+                    android:textSize="15sp"
+                    android:id="@+id/where"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="35dp" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:background="@mipmap/button_arrow"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@mipmap/where_back9"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp">
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/identified_button"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/help_buttons">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="How to use Identified?"
+                    android:textSize="15sp"
+                    android:id="@+id/identified"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="35dp" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:background="@mipmap/button_arrow"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@mipmap/identified"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/imageView3"
+                    android:background="@mipmap/Final_logo"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="33dp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
@@ -31,6 +214,12 @@
         android:scrollbars="vertical">
 
     </android.support.v7.widget.RecyclerView>
+
+
+
+
+
+
 
 </android.support.v4.widget.DrawerLayout>
 

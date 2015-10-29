@@ -13,4 +13,5 @@
     <string name="title_activity_about">About</string>
     <string name="title_activity_help">Help</string>
     <string name="title_activity_profile">Profile</string>
+    <string name="facebook_button">Visit us on Facebook</string>
 </resources>

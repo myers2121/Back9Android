@@ -1,5 +1,7 @@
 package com.astral.back9;
 
+import android.content.Context;
+import android.content.pm.PackageManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,12 +12,23 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+//WHAT i AM ADDING
+import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
+
+import java.net.URI;
+
 
 public class About extends AppCompatActivity {
 
     private Toolbar toolbar;
     private TextView toolbarText;
+
+
 
     String TITLES[] = {"Overview", "Profile", "Social", "Ranking", "About", "Help"};
 
@@ -33,6 +46,39 @@ public class About extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
+
+        RelativeLayout facebookLayout = (RelativeLayout) findViewById(R.id.facebookLayout);
+        RelativeLayout googlePlayStore = (RelativeLayout) findViewById(R.id.googlePlayStore);
+
+
+
+
+                   facebookLayout.setOnClickListener(
+                        new RelativeLayout.OnClickListener(){
+
+                            public void onClick(View v) {
+                                Uri goingToFacebook = Uri.parse("https://www.facebook.com/");
+                                Intent launchBrowser = new Intent(Intent.ACTION_VIEW, goingToFacebook);
+                                startActivity(launchBrowser);
+                            }
+                        }
+                    );
+
+
+
+                    googlePlayStore.setOnClickListener(
+                        new RelativeLayout.OnClickListener(){
+                                public void onClick(View v) {
+                                    Uri goingToPlayStore = Uri.parse("https://play.google.com/store/apps/details?id=com");
+                                    Intent launchBrowser = new Intent(Intent.ACTION_VIEW, goingToPlayStore);
+                                    startActivity(launchBrowser);
+                                }
+                        }
+                    );
+
+
+
+
 
         toolbar = (Toolbar) findViewById(R.id.tool_bar); // Attaching the layout to the toolbar object
         toolbar.setNavigationIcon(R.mipmap.back_button_nav);
@@ -85,6 +131,7 @@ public class About extends AppCompatActivity {
 
 
 
+
         }; // Drawer Toggle Object Made
         Drawer.setDrawerListener(mDrawerToggle); // Drawer Listener set to the Drawer toggle
         mDrawerToggle.syncState();
@@ -111,4 +158,7 @@ public class About extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }
+
+

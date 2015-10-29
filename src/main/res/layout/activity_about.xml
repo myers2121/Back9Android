@@ -11,13 +11,86 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#d8d8d8"
+        android:background="#eee"
         android:orientation="vertical">
 
         <include
             android:id="@+id/tool_bar"
             layout="@layout/tool_bar">
         </include>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFF"
+            android:layout_margin="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/state_pressed_color"
+                android:id="@+id/facebookLayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Like us on Facebook"
+                    android:id="@+id/facebookTextview"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="#4a4a4a"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/state_pressed_color"
+                android:id="@+id/googlePlayStore">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Rate us on Google Play"
+                    android:id="@+id/textView2"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Legal"
+                    android:id="@+id/legalTextView"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:id="@+id/videoView"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#4a4a4a" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
 
     </LinearLayout>
 

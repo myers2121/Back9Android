@@ -4,4 +4,5 @@
     <color name="ColorPrimaryDark">#2D5320</color>
     <color name="Facebook">#3B5893</color>
     <color name="GooglePlus">#DB4C3E</color>
+    <color name="StatePressed">#E0E0E0</color>
 </resources>

@@ -104,6 +104,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.astral.back9.SignIn" />
         </activity>
+        <activity
+            android:name=".CurrentRound"
+            android:label="@string/title_activity_current_round"
+            android:parentActivityName=".StartRound" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.astral.back9.StartRound" />
+        </activity>
     </application>
 
 </manifest>

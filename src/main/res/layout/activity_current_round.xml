@@ -1,0 +1,271 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.astral.back9.CurrentRound"
+    android:background="#FFF">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar">
+    </include>
+
+    <LinearLayout
+        android:id="@+id/distance_layout"
+        android:layout_below="@+id/tool_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3333333"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/ColorPrimary"
+                android:textSize="18dp"
+                android:layout_gravity="center_horizontal"
+                android:text="187"/>
+
+            <TextView
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="FRONT"/>
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/ColorPrimary"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3333333"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/ColorPrimary"
+                android:text="187"/>
+
+            <TextView
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="MIDDLE"/>
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/ColorPrimary"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3333334"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:textSize="18dp"
+                android:textColor="@color/ColorPrimary"
+                android:text="187"/>
+
+            <TextView
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="BACK"/>
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/ColorPrimary"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_below="@+id/distance_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#e3e3e3"
+        android:id="@+id/linearLayout" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentStart="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/circle_image_background"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/wind_speed_round"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="15"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MPH"
+            android:layout_below="@+id/wind_speed_round"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/score_buttons_top"
+        android:layout_above="@+id/score_buttons_second"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight=".2"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/circle_image_background"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight=".2"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/circle_image_background"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight=".2"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/circle_image_background"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight=".2"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/circle_image_background"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight=".2"
+            android:background="@drawable/circle_image_background"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/score_buttons_second"
+        android:layout_above="@+id/next_hole_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:weightSum="1"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight=".2"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/circle_image_background"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight=".2"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/circle_image_background"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight=".2"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/circle_image_background"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight=".2"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/circle_image_background"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight=".2"
+            android:background="@drawable/circle_image_background"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/next_hole_button"
+        android:layout_width="fill_parent"
+        android:layout_height="65dp"
+        android:text="NEXT HOLE"
+        android:layout_alignParentBottom="true"
+        android:textColor="#FFF"
+        android:background="@drawable/register_button"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp" />
+
+</RelativeLayout>

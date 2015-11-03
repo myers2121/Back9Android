@@ -40,7 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/help_buttons"
+
                 >
 
                 <TextView
@@ -80,7 +80,7 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:background="@drawable/help_buttons">
+                >
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -118,7 +118,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/help_buttons">
+                >
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -156,7 +156,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/help_buttons">
+                >
 
                 <TextView
                     android:layout_width="wrap_content"

@@ -192,10 +192,10 @@
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:id="@+id/imageView3"
+                    android:background="@mipmap/final_logo"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="33dp"
-                    android:background="@mipmap/final_logo" />
+                    android:layout_marginBottom="33dp" />
             </RelativeLayout>
 
         </LinearLayout>
@@ -206,7 +206,7 @@
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/RecyclerView"
+        android:id="@+id/mRecyclerView"
         android:layout_width="320dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"

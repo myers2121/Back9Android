@@ -16,8 +16,6 @@ import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 
-import org.w3c.dom.Text;
-
 public class SignIn extends AppCompatActivity {
 
     private Toolbar toolbar;
@@ -36,7 +34,7 @@ public class SignIn extends AppCompatActivity {
         setContentView(R.layout.activity_sign_in);
 
         signInButton = (Button) findViewById(R.id.sign_in_button_login);
-        email = (EditText) findViewById(R.id.username_edit_text);
+        email = (EditText) findViewById(R.id.forgot_password_email);
         password = (EditText) findViewById(R.id.password_edit_text);
         forgotPassword = (TextView) findViewById(R.id.forgot_password);
 

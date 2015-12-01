@@ -9,18 +9,136 @@
     android:elevation="7dp">
 
 
+
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:background="#d8d8d8"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:weightSum="1">
 
         <include
             android:id="@+id/tool_bar"
             layout="@layout/tool_bar">
         </include>
 
+
+        <LinearLayout
+            android:id="@+id/profile_header"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".4"
+            android:background="@mipmap/profile_background">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@mipmap/ernesto_selfie"
+                android:layout_gravity="center"
+                android:layout_marginTop="75dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/name_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ernesto Perez"
+                android:textColor="#FFF"
+                android:gravity="center_horizontal"/>
+            <TextView
+                android:layout_below="@id/name_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fresno, CA"
+                android:textColor="#d8d8d8"
+                android:gravity="center_horizontal"/>
+        </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/profile_stats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:weightSum="1"
+            android:background="#FFF">
+
+            <RelativeLayout
+                android:id="@+id/average_score_layout"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/state_pressed_color"
+                android:layout_weight=".5">
+
+                <TextView
+                    android:id="@+id/average_score_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Average Score"
+
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+                <View
+                    android:layout_width="150px"
+                    android:layout_height="5px"
+                    android:layout_centerInParent="true"
+                    android:layout_below="@id/average_score_textview"
+                    android:background="#581047"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/friends_layout"
+                android:layout_width="fill_parent"
+                android:background="@drawable/state_pressed_color"
+                android:layout_height="fill_parent"
+                android:layout_weight=".5">
+                <TextView
+                    android:id="@+id/friends_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Friends"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true" />
+                <View
+                    android:layout_width="150px"
+                    android:layout_height="5px"
+                    android:layout_centerInParent="true"
+                    android:layout_below="@id/friends_textview"
+                    android:background="#581047"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="#4a4a4a"/>
+
+
+
+
+             <ListView
+                android:layout_width="match_parent"
+                 android:layout_height="91dp"
+                 android:scrollbars="vertical"
+                android:id="@+id/bottomLayoutListView"
+                 android:background="#FFF"
+                 android:layout_weight="0.4" />
+
+
+
+
     </LinearLayout>
+
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/RecyclerView"

@@ -11,6 +11,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -60,6 +65,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             } else {
                 setContentView(R.layout.activity_main);
+
+
+
+
+
+
 
 
                 // Creates and sets up the action bar at the top of the overview screen. This is the same of every screen.

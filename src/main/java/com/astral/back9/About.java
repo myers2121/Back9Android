@@ -1,7 +1,5 @@
 package com.astral.back9;
 
-import android.content.Context;
-import android.content.pm.PackageManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,15 +10,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 //WHAT i AM ADDING
-import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
-
-import java.net.URI;
 
 
 public class About extends AppCompatActivity {
@@ -90,7 +84,7 @@ public class About extends AppCompatActivity {
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
 
-        mRecyclerView = (RecyclerView) findViewById(R.id.RecyclerView); // Assigning the RecyclerView Object to the xml View
+        mRecyclerView = (RecyclerView) findViewById(R.id.mRecyclerView); // Assigning the RecyclerView Object to the xml View
 
         mRecyclerView.setHasFixedSize(true);  // Letting the system know that the list objects are of fixed size
 

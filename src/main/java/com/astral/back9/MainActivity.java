@@ -12,7 +12,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.parse.ParseUser;
 
@@ -72,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                 toolbarText.setText("Overview");
                 setSupportActionBar(toolbar);
 
-                mRecyclerView = (RecyclerView) findViewById(R.id.RecyclerView); // Assigning the RecyclerView Object to the xml View
+                mRecyclerView = (RecyclerView) findViewById(R.id.mRecyclerView); // Assigning the RecyclerView Object to the xml View
 
                 mRecyclerView.setHasFixedSize(true);  // Letting the system know that the list objects are of fixed size
 

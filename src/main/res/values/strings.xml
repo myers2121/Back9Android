@@ -13,10 +13,67 @@
     <string name="title_activity_about">About</string>
     <string name="title_activity_help">Help</string>
     <string name="title_activity_profile">Profile</string>
-    <string name="title_activity_first_load">FirstLoadActivity</string>
+    <string name="title_activity_first_load">First Load</string>
+    <string name="title_activity_start_round">Start Round</string>
+    <string name="title_activity_forgot_password">Forgot Password</string>
 
-<!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_start_round">StartRound</string>
-    <string name="title_activity_forgot_password">ForgotPassword</string>
+
+    <string-array name="account_help_data">
+        <item>How do I connect my account to social media?</item>
+        <item>How do I change my profile picture?</item>
+        <item>How do I reset my password?</item>
+    </string-array>
+    <string-array name="scoring_help_data">
+        <item>How do I record my scores?</item>
+        <item>What if I need to change my score?</item>
+        <item>Can I delete a previous score?</item>
+    </string-array>
+    <string-array name="where_help_data">
+        <item>Where can I use Back9?</item>
+        <item>How can I tell if I am at a Back9 course?</item>
+        <item>How does Back9 know my location?</item>
+    </string-array>
+    <string-array name="ranking_help_data">
+        <item>How do I check my ranking?</item>
+        <item>What determines my ranking?</item>
+        <item>How often are rankings updated?</item>
+    </string-array>
+
+    <string name="title_activity_help_expanded">HelpExpanded</string>
+    <string name="title_activity_help_final">HelpFinal</string>
+
+    <string-array name="account_help_final">
+        <item>How do I connect my account to social media?</item>
+        <item>To connect your account to social media simply open the side navigation bar and select the social media you wish to connect to from the bottom. Once selected you will be redirected to sign in, after doing so your accounts will be linked.</item>
+        <item>How do I change my profile picture?</item>
+        <item>To change your profile picture go into your account and select the image. Selecting it will bring up some options, and one of these will be \'Change Profile Picture\'. Select that option and it will allow you to choose from taking a photo, using one from your library, or one from a linked social media account. After you have made your selection hit save and it will be uploaded.</item>
+        <item>How do I reset my password?</item>
+        <item>To reset your password you must select the \'Forgot Password\' option from the sign in page. Once you have selected it, you will be taken through a series of steps to receive a password reset email in the email connected with your account.</item>
+    </string-array>
+    <string-array name="scoring_help_final">
+        <item>How do I record my scores?</item>
+        <item>While at a registered Back9 golf course you will be able to start a round of golf. Once the round has begun you will be taken to a scoring page where you will be able to select the hole you are on as well as input what score you ended the hole with.</item>
+        <item>What if I need to change my score?</item>
+        <item>You can change your score at any point during the round by simply switch back to that hole and changing the score, but once the final score total has been recorded and submitted you will be unable to change your score.</item>
+        <item>Can I delete a previous score?</item>
+        <item>In order to keep the rankings fair we do not allow users to delete scores they have submitted.</item>
+    </string-array>
+    <string-array name="where_help_final">
+        <item>Where can I use Back9?</item>
+        <item>Back9 can currently be used at any golf course in the Fresno/Clovis counties. More golf courses will be added in future updates, and listed on a future course tab.</item>
+        <item>How can I tell if I am at a Back9 course?</item>
+        <item>You will receive a notification from Back9 that the course you are at is a valid Back9 registered course. As well as by opening the app and going to the start a round page it will verify whether you are at an applicable course.</item>
+        <item>How does Back9 know my location?</item>
+        <item>Back9 uses your network to keep track of your location just like many map applications do so.</item>
+    </string-array>
+    <string-array name="ranking_help_final">
+        <item>How do I check my ranking?</item>
+        <item>To check your ranking all you need to do is go to the ranking tab, and from there it will present with many different ranking filters that will show how you are doing on global, area, and friends level.</item>
+        <item>What determines my ranking?</item>
+        <item>Your ranking is determined by your score per hole, your over all score, and the total holes you have golfed.</item>
+        <item>How often are rankings updated?</item>
+        <item>Rankings will be updated hourly in order to keep people up to date on their current standings.</item>
+    </string-array>
+
+
 </resources>

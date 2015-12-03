@@ -17,7 +17,6 @@
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -103,6 +102,22 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.astral.back9.SignIn" />
+        </activity>
+        <activity
+            android:name=".HelpExpanded"
+            android:label="@string/title_activity_help_expanded"
+            android:parentActivityName=".Help" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.astral.back9.Help" />
+        </activity>
+        <activity
+            android:name=".HelpFinal"
+            android:label="@string/title_activity_help_final"
+            android:parentActivityName=".HelpExpanded" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.astral.back9.HelpExpanded" />
         </activity>
     </application>
 

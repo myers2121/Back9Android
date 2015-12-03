@@ -10,12 +10,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.content.Intent;
+
+import java.util.ArrayList;
 
 public class Help extends AppCompatActivity {
 
     private Toolbar toolbar;
     private TextView toolbarText;
+    private RelativeLayout accountHelp, scoringHelp, whereHelp, rankingHelp;
 
     String TITLES[] = {"Overview", "Profile", "Social", "Ranking", "About", "Help"};
 
@@ -29,6 +34,8 @@ public class Help extends AppCompatActivity {
 
     ActionBarDrawerToggle mDrawerToggle;
 
+    private String[] helpData, helpFinal;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +46,7 @@ public class Help extends AppCompatActivity {
 
         toolbarText = (TextView) toolbar.findViewById(R.id.toolbar_text);
 
-        toolbarText.setText("How can we help?");
+        toolbarText.setText("HOW CAN WE HELP?");
 
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
@@ -48,14 +55,9 @@ public class Help extends AppCompatActivity {
 
         mRecyclerView.setHasFixedSize(true);  // Letting the system know that the list objects are of fixed size
 
-        //NAME = currentUser.getString("firstName") + " " + currentUser.getString("lastName");
-        //LOCATION = currentUser.getEmail();
-
-
         mAdapter = new NavDrawerAdapter(TITLES,NAME,LOCATION,this);       // Creating the Adapter of MyAdapter class(which we are going to see in a bit)
         // And passing the titles,icons,header view name, header view email,
         // and header view profile picture
-
 
         mAdapter = new NavDrawerAdapter(TITLES,NAME,LOCATION,this);       // Creating the Adapter of MyAdapter class(which we are going to see in a bit)
         // And passing the titles,icons,header view name, header view email,
@@ -83,11 +85,62 @@ public class Help extends AppCompatActivity {
                 // Code here will execute once drawer is closed
             }
 
-
-
         }; // Drawer Toggle Object Made
         Drawer.setDrawerListener(mDrawerToggle); // Drawer Listener set to the Drawer toggle
         mDrawerToggle.syncState();
+
+        accountHelp = (RelativeLayout) findViewById(R.id.account_help_button);
+        scoringHelp = (RelativeLayout) findViewById(R.id.scoring_help_button);
+        whereHelp = (RelativeLayout) findViewById(R.id.where_help_button);
+        rankingHelp = (RelativeLayout) findViewById(R.id.ranking_help_button);
+
+        accountHelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Help.this, HelpExpanded.class);
+                helpData = getResources().getStringArray(R.array.account_help_data);
+                helpFinal = getResources().getStringArray(R.array.account_help_final);
+                intent.putExtra("accountData", helpData);
+                intent.putExtra("accountFinal",helpFinal);
+                startActivity(intent);
+            }
+        });
+
+        scoringHelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Help.this, HelpExpanded.class);
+                helpData = getResources().getStringArray(R.array.scoring_help_data);
+                helpFinal = getResources().getStringArray(R.array.scoring_help_final);
+                intent.putExtra("accountData", helpData);
+                intent.putExtra("accountFinal",helpFinal);
+                startActivity(intent);
+            }
+        });
+
+        whereHelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Help.this, HelpExpanded.class);
+                helpData = getResources().getStringArray(R.array.where_help_data);
+                helpFinal = getResources().getStringArray(R.array.where_help_final);
+                intent.putExtra("accountData", helpData);
+                intent.putExtra("accountFinal", helpFinal);
+                startActivity(intent);
+            }
+        });
+
+        rankingHelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Help.this, HelpExpanded.class);
+                helpData = getResources().getStringArray(R.array.ranking_help_data);
+                helpFinal = getResources().getStringArray(R.array.ranking_help_final);
+                intent.putExtra("accountData", helpData);
+                intent.putExtra("accountFinal", helpFinal);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

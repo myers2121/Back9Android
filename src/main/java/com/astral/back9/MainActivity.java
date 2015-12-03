@@ -11,8 +11,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.parse.ParseUser;
 
@@ -62,6 +66,12 @@ public class MainActivity extends AppCompatActivity {
                 setContentView(R.layout.activity_main);
 
 
+
+
+
+
+
+
                 // Creates and sets up the action bar at the top of the overview screen. This is the same of every screen.
 
                 toolbar = (Toolbar) findViewById(R.id.tool_bar); // Attaching the layout to the toolbar object
@@ -72,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                 toolbarText.setText("Overview");
                 setSupportActionBar(toolbar);
 
-                mRecyclerView = (RecyclerView) findViewById(R.id.RecyclerView); // Assigning the RecyclerView Object to the xml View
+                mRecyclerView = (RecyclerView) findViewById(R.id.mRecyclerView); // Assigning the RecyclerView Object to the xml View
 
                 mRecyclerView.setHasFixedSize(true);  // Letting the system know that the list objects are of fixed size
 

@@ -11,7 +11,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="70dp"
     android:layout_height="70dp"
-    android:src="@mipmap/ic_launcher"
+    android:src="@mipmap/fresnostate"
     app:border_width="0dp"
     android:layout_marginTop="16dp"
     android:layout_marginRight="16dp"

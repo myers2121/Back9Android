@@ -128,7 +128,7 @@
                         android:textColor="@color/ColorPrimary"
                         android:layout_gravity="center_horizontal"
                         android:textSize="24sp"
-                        android:text="5,123"/>
+                        android:text="5123"/>
 
                     <TextView
                         android:layout_gravity="center_horizontal"

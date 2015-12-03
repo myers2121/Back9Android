@@ -31,26 +31,28 @@
             android:layout_weight=".4"
             android:background="@mipmap/profile_background">
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@mipmap/ernesto_selfie"
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:src="@mipmap/fresnostate"
                 android:layout_gravity="center"
                 android:layout_marginTop="75dp"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             >
             <TextView
-                android:id="@+id/name_textview"
+                android:id="@+id/profile_name_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Ernesto Perez"
                 android:textColor="#FFF"
                 android:gravity="center_horizontal"/>
             <TextView
-                android:layout_below="@id/name_textview"
+                android:id="@+id/user_location_profile"
+                android:layout_below="@+id/profile_name_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Fresno, CA"

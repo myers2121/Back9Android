@@ -186,6 +186,10 @@ public class CurrentRound extends AppCompatActivity implements View.OnClickListe
 
         Log.e("Tag", String.valueOf(distanceToBack));
 
+        if (currentHole == 18) {
+            nextHoleButton.setText("FINISH ROUND");
+        }
+
         frontOfGreen.setText(String.valueOf((int) distanceToFront));
         middleOfGreen.setText(String.valueOf((int) distanceToMiddle));
         backOfGreen.setText(String.valueOf((int) distanceToBack));
@@ -362,8 +366,15 @@ public class CurrentRound extends AppCompatActivity implements View.OnClickListe
 
 
             } else {
+
                 ParseUser currentUser = ParseUser.getCurrentUser();
-                currentUser.put("averageScore", (currentUser.getInt("averageScore") + totalStrokes) / currentUser.getInt("roundsPlayed"));
+
+                int averageScore = currentUser.getInt("averageScore");
+                int roundsPlayed = currentUser.getInt("roundsPlayed");
+
+                Toast.makeText(getApplicationContext(), String.valueOf(roundsPlayed), Toast.LENGTH_LONG).show();
+
+                currentUser.put("averageScore", ((averageScore * roundsPlayed) + totalStrokes) / (roundsPlayed + 1));
                 currentUser.put("holesPlayed", currentUser.getInt("holesPlayed") + currentHole);
                 currentUser.put("totalStrokes", currentUser.getInt("totalStrokes") + totalStrokes);
                 currentUser.saveInBackground(new SaveCallback() {

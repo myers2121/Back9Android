@@ -18,7 +18,7 @@
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight=".5"
-        android:background="#4a4a4a"
+        android:background="@mipmap/drawer_background"
         android:gravity="center"
         android:orientation="vertical">
 

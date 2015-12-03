@@ -47,6 +47,7 @@
         <activity
             android:name=".Social"
             android:label="@string/title_activity_social"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -55,6 +56,7 @@
         <activity
             android:name=".Ranking"
             android:label="@string/title_activity_ranking"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -63,6 +65,7 @@
         <activity
             android:name=".About"
             android:label="@string/title_activity_about"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -71,6 +74,7 @@
         <activity
             android:name=".Help"
             android:label="@string/title_activity_help"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -79,18 +83,21 @@
         <activity
             android:name=".Profile"
             android:label="@string/title_activity_profile"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.astral.back9.MainActivity" />
         </activity>
         <activity
+            android:screenOrientation="portrait"
             android:name=".FirstLoadActivity"
             android:label="@string/title_activity_first_load" >
         </activity>
         <activity
             android:name=".StartRound"
             android:label="@string/title_activity_start_round"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -99,6 +106,7 @@
         <activity
             android:name=".ForgotPassword"
             android:label="@string/title_activity_forgot_password"
+            android:screenOrientation="portrait"
             android:parentActivityName=".SignIn" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -106,7 +114,8 @@
         </activity>
         <activity
             android:name=".CurrentRound"
-            android:label="@string/title_activity_current_round" >
+            android:label="@string/title_activity_current_round"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.astral.back9.StartRound" />

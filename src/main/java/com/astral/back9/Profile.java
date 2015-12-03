@@ -28,6 +28,8 @@ import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
+import com.parse.ParseUser;
+
 import org.json.JSONArray;
 
 import java.io.IOException;
@@ -42,7 +44,7 @@ import java.util.Map;
 public class Profile extends AppCompatActivity {
 
     private Toolbar toolbar;
-    private TextView toolbarText;
+    private TextView toolbarText, userFullName, userLocation;
 
     String TITLES[] = {"Overview", "Profile", "Ranking", "About", "Help"};
 
@@ -56,23 +58,28 @@ public class Profile extends AppCompatActivity {
 
     ActionBarDrawerToggle mDrawerToggle;
 
+    private ParseUser currentUser;
 
-
-        Person ernesto = new Person("Ernesto","Fresno");
-        Person connor = new Person("Connor","Fresno");
-        Person rahul = new  Person("Rahul","Fresno");
-        Person trevor = new Person("Trevor","Fresno");
-        Person cory = new Person("Cory","Fresno");
-        Person drake = new Person("Drake","Canada");
-        Person meekmill = new Person("Meek Mill","The Hood");
-
-
-
+    Person ernesto = new Person("Ernesto","Fresno");
+    Person connor = new Person("Connor","Fresno");
+    Person rahul = new  Person("Rahul","Fresno");
+    Person trevor = new Person("Trevor","Fresno");
+    Person cory = new Person("Cory","Fresno");
+    Person drake = new Person("Drake","Canada");
+    Person meekmill = new Person("Meek Mill","The Hood");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        currentUser = ParseUser.getCurrentUser();
+
+        userLocation = (TextView) findViewById(R.id.user_location_profile);
+        userFullName = (TextView) findViewById(R.id.profile_name_text_view);
+
+        userFullName.setText(currentUser.getString("FirstName") + " " + currentUser.getString("LastName"));
+        userLocation.setText(currentUser.getString("city"));
 
         RelativeLayout averageScoreLayout = (RelativeLayout) findViewById(R.id.average_score_layout);
         RelativeLayout friendsLayout = (RelativeLayout) findViewById(R.id.friends_layout);

@@ -44,7 +44,7 @@ public class Profile extends AppCompatActivity {
     private Toolbar toolbar;
     private TextView toolbarText;
 
-    String TITLES[] = {"Overview", "Profile", "Social", "Ranking", "About", "Help"};
+    String TITLES[] = {"Overview", "Profile", "Ranking", "About", "Help"};
 
     String NAME = "Connor Myers";
     String LOCATION = "Fresno, CA";

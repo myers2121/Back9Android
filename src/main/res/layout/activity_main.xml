@@ -12,13 +12,209 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#d8d8d8"
-        android:orientation="vertical">
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:weightSum="1">
 
         <include
             android:id="@+id/tool_bar"
             layout="@layout/tool_bar">
         </include>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".33333"
+            android:weightSum="1"
+            android:orientation="horizontal"
+            >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:background="@drawable/square_image_background"
+                android:layout_margin="8dp"
+                android:layout_weight=".5">
+
+                <LinearLayout
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/average_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/ColorPrimary"
+                        android:textSize="24sp"
+                        android:text="84"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10sp"
+                        android:layout_marginTop="8dp"
+                        android:text="AVERAGE SCORE"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:background="@drawable/square_image_background"
+                android:layout_margin="8dp"
+                android:layout_weight=".5">
+
+                <LinearLayout
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/holes_played"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/ColorPrimary"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="24sp"
+                        android:text="9,312"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10sp"
+                        android:layout_marginTop="8dp"
+                        android:text="HOLES PLAYED"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".33333"
+            >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:background="@drawable/square_image_background"
+                android:layout_margin="8dp"
+                android:layout_weight=".5">
+
+                <LinearLayout
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/current_rank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/ColorPrimary"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="24sp"
+                        android:text="5,123"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10sp"
+                        android:layout_marginTop="8dp"
+                        android:text="CURRENT RANK"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:background="@drawable/square_image_background"
+                android:layout_margin="8dp"
+                android:layout_weight=".5">
+
+                <LinearLayout
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/total_strokes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/ColorPrimary"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="24sp"
+                        android:text="3,132"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10sp"
+                        android:layout_marginTop="8dp"
+                        android:text="TOTAL STROKES"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".33334"
+            android:background="@drawable/square_image_background"
+            android:layout_margin="8dp"
+            >
+
+            <LinearLayout
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/favorite_course"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/ColorPrimary"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="24sp"
+                    android:text="Fig garden golf course"/>
+
+                <TextView
+                    android:layout_below="@id/favorite_course"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:layout_marginTop="8dp"
+                    android:text="FAVORITE COURSE"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
 
     </LinearLayout>
 

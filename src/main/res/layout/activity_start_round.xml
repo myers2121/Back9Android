@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF"
-    android:weightSum="2"
+    android:weightSum="1"
     android:orientation="vertical"
     tools:context="com.astral.back9.StartRound">
 
@@ -17,7 +17,7 @@
         android:id="@+id/course_image"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight=".5"
         android:background="#4a4a4a"
         android:gravity="center"
         android:orientation="vertical">
@@ -54,58 +54,131 @@
 
     <LinearLayout
         android:id="@+id/top_circles"
-        android:layout_below="@+id/course_image"
         android:layout_width="fill_parent"
-        android:weightSum="2"
-        android:layout_height="wrap_content">
+        android:weightSum="1"
+        android:layout_height="0dp"
+        android:layout_weight=".25">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_weight="1"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/circle_image_background"
-            android:orientation="horizontal"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp">
+            android:layout_height="fill_parent"
+            android:layout_margin="8dp"
+            android:layout_weight=".5">
 
+            <LinearLayout
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
+                <TextView
+                    android:id="@+id/course_par"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/ColorPrimary"
+                    android:textSize="24sp"
+                    android:text="84"/>
 
-        </LinearLayout>
+                <TextView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:layout_marginTop="8dp"
+                    android:text="PAR"/>
 
-        <LinearLayout
-            android:id="@+id/par_data"
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
             android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_weight="1"
-            android:background="@drawable/circle_image_background"
-            android:orientation="vertical"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="16dp">
+            android:layout_height="fill_parent"
+            android:layout_margin="8dp"
+            android:layout_weight=".5">
 
+            <LinearLayout
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
+                <TextView
+                    android:id="@+id/course_total_holes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/ColorPrimary"
+                    android:textSize="24sp"
+                    android:text="18"/>
 
-        </LinearLayout>
+                <TextView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:layout_marginTop="8dp"
+                    android:text="TOTAL HOLES"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
 
     </LinearLayout>
 
         <LinearLayout
-            android:layout_below="@+id/top_circles"
             android:id="@+id/player_data"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="0dp"
             android:layout_marginTop="16dp"
-            android:background="@drawable/circle_image_background"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="16dp"
+            android:layout_weight=".25"
+            android:weightSum="1">
 
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="8dp"
+                android:layout_weight=".5">
 
+                <LinearLayout
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/course_average_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/ColorPrimary"
+                        android:textSize="24sp"
+                        android:text="82"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10sp"
+                        android:layout_marginTop="8dp"
+                        android:text="COURSE AVERAGE"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
 
         </LinearLayout>
 
 
     <Button
+        android:id="@+id/start_round"
         android:layout_width="fill_parent"
         android:layout_height="65dp"
         android:text="START ROUND"

@@ -28,6 +28,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/front_of_green"
                 android:layout_marginBottom="8dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -58,6 +59,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/middle_of_green"
                 android:layout_marginBottom="8dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -88,6 +90,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/back_of_green"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -135,20 +138,33 @@
             android:background="@drawable/circle_image_background"
             android:layout_centerInParent="true"/>
 
-        <TextView
-            android:id="@+id/wind_speed_round"
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="15"
-            />
+            android:layout_centerInParent="true">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="MPH"
-            android:layout_below="@+id/wind_speed_round"
-            android:layout_centerInParent="true"/>
+            <TextView
+                android:id="@+id/current_round_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textSize="32dp"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/ColorPrimary"
+                android:text="15"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="CURRENT SCORE"
+                android:textSize="10sp"
+                android:layout_below="@+id/current_round_score"  />
+
+        </RelativeLayout>
+
+
 
     </RelativeLayout>
 
@@ -163,43 +179,58 @@
         android:layout_marginStart="8dp"
         android:orientation="horizontal">
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <Button
+            android:id="@+id/score_1_button"
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_weight=".2"
             android:layout_marginEnd="8dp"
-            android:background="@drawable/circle_image_background"
+            android:textColor="#FFFFFF"
+            android:text="1"
+            android:background="@drawable/register_button"
             />
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <Button
+            android:id="@+id/score_2_button"
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_weight=".2"
             android:layout_marginEnd="8dp"
-            android:background="@drawable/circle_image_background"
+            android:textColor="#FFFFFF"
+            android:text="2"
+            android:background="@drawable/register_button"
             />
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <Button
+            android:id="@+id/score_3_button"
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_weight=".2"
             android:layout_marginEnd="8dp"
-            android:background="@drawable/circle_image_background"
+            android:textColor="#FFFFFF"
+            android:text="3"
+            android:background="@drawable/register_button"
             />
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <Button
+            android:id="@+id/score_4_button"
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_weight=".2"
             android:layout_marginEnd="8dp"
-            android:background="@drawable/circle_image_background"
+            android:textColor="#FFFFFF"
+            android:text="4"
+            android:background="@drawable/register_button"
             />
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <Button
+            android:id="@+id/score_5_button"
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_weight=".2"
-            android:background="@drawable/circle_image_background"
+            android:textColor="#FFFFFF"
+            android:text="5"
+            android:background="@drawable/register_button"
             />
 
     </LinearLayout>
@@ -215,43 +246,58 @@
         android:weightSum="1"
         android:orientation="horizontal">
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <Button
+            android:id="@+id/score_6_button"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight=".2"
+            android:textColor="#FFFFFF"
+            android:layout_marginEnd="8dp"
+            android:text="6"
+            android:background="@drawable/register_button"
+            />
+
+        <Button
+            android:id="@+id/score_7_button"
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_weight=".2"
             android:layout_marginEnd="8dp"
-            android:background="@drawable/circle_image_background"
+            android:textColor="#FFFFFF"
+            android:text="7"
+            android:background="@drawable/register_button"
             />
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <Button
+            android:id="@+id/score_8_button"
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_weight=".2"
             android:layout_marginEnd="8dp"
-            android:background="@drawable/circle_image_background"
+            android:textColor="#FFFFFF"
+            android:text="8"
+            android:background="@drawable/register_button"
             />
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <Button
+            android:id="@+id/score_9_button"
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_weight=".2"
             android:layout_marginEnd="8dp"
-            android:background="@drawable/circle_image_background"
+            android:textColor="#FFFFFF"
+            android:text="9"
+            android:background="@drawable/register_button"
             />
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <Button
+            android:id="@+id/score_10_button"
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_weight=".2"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/circle_image_background"
-            />
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="0dp"
-            android:layout_height="80dp"
-            android:layout_weight=".2"
-            android:background="@drawable/circle_image_background"
+            android:textColor="#FFFFFF"
+            android:text="10"
+            android:background="@drawable/register_button"
             />
 
     </LinearLayout>

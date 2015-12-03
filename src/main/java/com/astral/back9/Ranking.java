@@ -16,7 +16,7 @@ public class Ranking extends AppCompatActivity {
     private TextView toolbarText;
 
     //NavDrawer List Values (to be populated):
-    String TITLES[] = {"Overview", "Profile", "Social", "Ranking", "About", "Help"};
+    String TITLES[] = {"Overview", "Profile", "Ranking", "About", "Help"};
     String NAME = "Connor Myers";
     String LOCATION = "Fresno, CA";
 

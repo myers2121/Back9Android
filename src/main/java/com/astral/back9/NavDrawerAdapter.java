@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.parse.ParseUser;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
@@ -29,7 +31,7 @@ public class NavDrawerAdapter extends RecyclerView.Adapter<NavDrawerAdapter.View
     private String email;       //String Resource for header view email
     Context context;
 
-
+    ParseUser currentUser;
 
 
     // Creating a ViewHolder which extends the RecyclerView View Holder
@@ -88,15 +90,11 @@ public class NavDrawerAdapter extends RecyclerView.Adapter<NavDrawerAdapter.View
                 contxt.startActivity(settingsIntent);
 
             } else if (position == 3) {
-                Intent helpIntent = new Intent((Activity) contxt, Social.class);
-                contxt.startActivity(helpIntent);
-
-            } else if (position == 4) {
 
                 Intent settingsIntent = new Intent((Activity) contxt, Ranking.class);
                 contxt.startActivity(settingsIntent);
 
-            } else if (position == 5) {
+            } else if (position == 4) {
 
                 Intent settingsIntent = new Intent((Activity) contxt, About.class);
                 contxt.startActivity(settingsIntent);
@@ -173,10 +171,10 @@ public class NavDrawerAdapter extends RecyclerView.Adapter<NavDrawerAdapter.View
         }
         else{
             // Similarly we set the resources for header view
+            currentUser = ParseUser.getCurrentUser();
 
-
-            holder.Name.setText(name);
-            holder.email.setText(email);
+            holder.Name.setText(currentUser.getString("FirstName") + " " + currentUser.getString("LastName"));
+            holder.email.setText(currentUser.getEmail());
             holder.profile.setImageResource(R.mipmap.fresnostate);
         }
     }

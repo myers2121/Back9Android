@@ -27,7 +27,9 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private TextView toolbarText;
 
-    String TITLES[] = {"Overview", "Profile", "Social", "Ranking", "About", "Help"};
+    private TextView averageScore, holesPlayed, currentRanking, favoriteCourse, totalStrokes;
+
+    String TITLES[] = {"Overview", "Profile", "Ranking", "About", "Help"};
 
     String NAME = "Connor Myers";
     String LOCATION = "Fresno, CA";
@@ -65,12 +67,16 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 setContentView(R.layout.activity_main);
 
+                averageScore = (TextView) findViewById(R.id.average_score);
+                favoriteCourse = (TextView) findViewById(R.id.favorite_course);
+                totalStrokes = (TextView) findViewById(R.id.total_strokes);
+                currentRanking = (TextView) findViewById(R.id.current_rank);
+                holesPlayed = (TextView) findViewById(R.id.holes_played);
 
-
-
-
-
-
+                averageScore.setText(String.valueOf(currentUser.getInt("averageScore")));
+                favoriteCourse.setText(currentUser.getString("favoriteCourse"));
+                totalStrokes.setText(String.valueOf(currentUser.getInt("totalStrokes")));
+                holesPlayed.setText(String.valueOf(currentUser.getInt("holesPlayed")));
 
                 // Creates and sets up the action bar at the top of the overview screen. This is the same of every screen.
 
